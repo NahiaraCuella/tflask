@@ -35,14 +35,6 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
-
-    return app
-
-def create_app():
-    app = ...
-    # existing code omitted
-
-    from . import auth
-    app.register_blueprint(auth.bp)
+    
 
     return app
