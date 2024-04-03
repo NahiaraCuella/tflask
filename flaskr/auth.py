@@ -104,6 +104,9 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        verif_password = request.form['password']
+        mail = request.form['mail']
+        
         db = get_db()
         error = None
 
@@ -111,6 +114,10 @@ def register():
             error = 'Username is required.'
         elif not password:
             error = 'Password is required.'
+        elif verif_password:
+            error = 'no coinciden contraseñas'
+        elif not mail:
+            error = 'se necesita mail'
 
         if error is None:
             try:

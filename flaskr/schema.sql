@@ -5,6 +5,8 @@ CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   username TEXT UNIQUE NOT NULL,
   password TEXT NOT NULL
+  verif_password TEXT NOT NULL,
+  mail TEXT NOT NULL
 );
 
 CREATE TABLE post (
